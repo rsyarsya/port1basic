@@ -1,0 +1,58 @@
+section{
+    padding-top: 72px;
+}
+
+.navbar{
+    background-color: lightgray;
+}
+
+.col-4 {
+    border-radius: 10px; /* Sudut melengkung */
+}
+  
+.col-4 img {
+    transition: transform 0.3s ease; /* Animasi transisi */
+}
+  
+.col-4:hover img {
+    transform: scale(1.1); /* Perbesar gambar saat hover */
+}
+
+.btn.button{
+    border-radius: 28px;
+    border: solid black 2px;
+}
+
+.btn.button:hover{
+    color: white;
+    background-color: black;
+}
+
+.home h1{
+    font-size: 72px;
+    padding-left: 24px;
+}
+
+.home h3{
+    font-size: 64px;
+}
+
+.home .arrow img{
+    width: 60px;
+}
+
+@keyframes upDown{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+#arrow{
+    animation:upDown 1.5s infinite;
+}
