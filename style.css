@@ -76,6 +76,65 @@ section::before{
     display: none;
 }
 
+.work::before{
+    content: 'Work';
+}
+
+.work-img{
+    display: grid;
+    grid-template-columns: (2, 1fr);
+    grid-template-areas: "work-1 work-2" "work-3 work-3";
+    gap: 16px;
+}
+
+.work-img img{
+    width: 100%;
+}
+
+.work-img-item{
+    position: relative;
+}
+
+.work-img-item:hover::after{
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+
+}
+
+#work-1{
+    grid-area: work-1;
+}
+#work-1:hover::after{
+    content: 'IEEE TECH4GOOD Project';
+    font-size: 24px;
+}
+
+#work-2{
+    grid-area: work-2;
+}
+#work-2:hover::after{
+    content: 'Clean Water Infrastructure Projects';
+    font-size: 18px;
+}
+
+#work-3{
+    grid-area: work-3;
+}
+#work-3:hover::after{
+    content: 'ENFORIAN 2024';
+    font-size: 33px;
+}
+
 #arrow{
     animation:upDown 1.5s infinite;
 }
