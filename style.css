@@ -7,7 +7,7 @@ section::before{
     z-index: -1;
     content: '';
     font-size: 72px;
-    color: lightgray;
+    color: rgb(54, 50, 50);
     opacity: 0.25;
     position: absolute;
     font-weight: 700;
@@ -15,19 +15,39 @@ section::before{
     left: -25px;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
 .navbar{
     background-color: lightgray;
 }
 
-.col-4 {
+#pp {
     border-radius: 10px; /* Sudut melengkung */
 }
   
-.col-4 img {
+#pp img {
     transition: transform 0.3s ease; /* Animasi transisi */
 }
+
+@media only screen and (max-width: 768px) {
+    #pp {
+        width: 50%; 
+        height: auto; 
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    section::before{
+        font-size: 64px;
+        top: -20px;
+        left: 15px;
+    }
+}
   
-.col-4:hover img {
+#pp:hover img {
     transform: scale(1.1); /* Perbesar gambar saat hover */
 }
 
