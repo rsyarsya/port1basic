@@ -76,6 +76,10 @@ section::before{
     display: none;
 }
 
+.work{
+    margin-top: 72px;
+}
+
 .work::before{
     content: 'Work';
 }
@@ -133,6 +137,39 @@ section::before{
 #work-3:hover::after{
     content: 'ENFORIAN 2024';
     font-size: 33px;
+}
+
+.contact{
+    margin-top: 128px;
+    padding-bottom: 128px;
+}
+
+.contact::before{
+    content: 'Contact';
+}
+
+.contact-form{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 32px 64px;
+}
+
+.form-label{
+    font-weight: 600;
+}
+
+#linked{
+    padding-left: 6px;
+}
+
+.btn.button-submit{
+    border-radius: 28px;
+    border: solid black 2px;
+}
+
+.btn.button-submit:hover, .btn.button-submit:active{
+    color: white;
+    background-color: black;
 }
 
 #arrow{
