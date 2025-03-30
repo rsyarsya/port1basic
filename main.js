@@ -57,3 +57,33 @@ function onFormSubmit(e){
 
     
 }
+
+document.getElementById('contact-js').addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    const email = document.getElementById('inp_email').value;
+    const subject = document.getElementById('inp_subject').value;
+    const message = document.getElementById('inp_message').value;
+
+    const responseMessage = document.getElementById('responseMessage');
+
+    try {
+        const response = await fetch('/api/sendEmail', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, subject, message }),
+        });
+
+        const data = await response.json();
+        responseMessage.textContent = data.message;
+
+        if (response.ok) {
+            responseMessage.style.color = 'green';
+        } else {
+            responseMessage.style.color = 'red';
+        }
+    } catch (error) {
+        responseMessage.textContent = 'Error sending message.';
+        responseMessage.style.color = 'red';
+    }
+});
